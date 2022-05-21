@@ -1,0 +1,52 @@
+[
+    {   "_id": 1,
+        "name": "Ab03",
+        "img": "https://i.ibb.co/37mm3W1/part-1.png",
+        "description": "These are universal tires that have no special mounting requirements.",
+        "minOrderQty": "50",
+        "availableQty": "200",
+        "price": "30000"
+    },
+    {   "_id": 2,
+        "name": "BB12",
+        "img": "https://i.ibb.co/tQT60JS/part-2.jpg",
+        "description": "These tires consist of two halves with different tread patterns - the right tire has a directional rain pattern",
+        "minOrderQty": "50",
+        "availableQty": "200",
+        "price": "25000"
+    },
+    {   "_id": 3,
+        "name": "Bike01",
+        "img": "https://i.ibb.co/PWQf02g/part-3.png",
+        "description": "On the surface of such tires there is always a mark in the form of an arrow with the inscription Rotation,",
+        "minOrderQty": "50",
+        "availableQty": "200",
+        "price": "15000"
+    },
+    
+    {   "_id": 4,
+        "name": "Piralli120",
+        "img": "https://i.ibb.co/LxGhk16/part-4.png",
+        "description": "These tires are a real salvation for those who drive on off-road, and other motorists often choose them,",
+        "minOrderQty": "50",
+        "availableQty": "200",
+        "price": "16000"
+    },
+    {   "_id": 5,
+        "name": "Bike01",
+        "img": "https://i.ibb.co/PWQf02g/part-3.png",
+        "description": "On the surface of such tires there is always a mark in the form of an arrow with the inscription Rotation,",
+        "minOrderQty": "50",
+        "availableQty": "200",
+        "price": "15000"
+    },
+    
+    {   "_id": 6,
+        "name": "Piralli120",
+        "img": "https://i.ibb.co/LxGhk16/part-4.png",
+        "description": "These tires are a real salvation for those who drive on off-road, and other motorists often choose them,",
+        "minOrderQty": "50",
+        "availableQty": "200",
+        "price": "16000"
+    }
+]
