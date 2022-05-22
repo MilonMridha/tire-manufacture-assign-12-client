@@ -110,7 +110,7 @@ if(user || gUser){
                     </form>
                     <small><p className='text-center'>Forgot Password ? <Link to='/reset' className='text-secondary'> Reset password</Link></p></small>
 
-                    <small><p className='text-center'>New to Doctor's Portal? <Link className='text-secondary' to='/signup'>Create New Account</Link></p>  </small>
+                    <small><p className='text-center'>New to Car's Wheel ? <Link className='text-secondary' to='/signup'>Create New Account</Link></p>  </small>
                     <div className="divider">OR</div>
                     <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-accent">Continue with google</button>
                 </div>
