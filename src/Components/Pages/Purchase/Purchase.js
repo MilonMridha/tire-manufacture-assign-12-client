@@ -11,12 +11,12 @@ const Purchase = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setDetail(data))
-    }, [id])
+    }, [])
     return (
         <div className='flex justify-center mt-10'>
             <div class="card md:max-w-md bg-base-100 shadow-xl text-left">
             <figure>
-                <img className='rounded-full' style={{width: '200px'}} src={img} alt="Shoes" />
+                <img className='rounded-full' style={{width: '200px'}} src={img} alt="part" />
             </figure>
             <div class="card-body">
                 <h2 class="card-title">Name: {name}</h2>
