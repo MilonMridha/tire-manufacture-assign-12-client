@@ -5,7 +5,7 @@ const useHook =()=>{
     const [parts, setParts] = useState([]);
 
     useEffect(()=>{
-        fetch('fakeData.json')
+        fetch('http://localhost:5000/parts')
         .then(res=> res.json())
         .then(data => setParts(data))
     },[])
