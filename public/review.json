@@ -1,6 +1,6 @@
 [
     {
-        "id" : 1,
+        "_id" : 1,
         "name" : "Amir Hamza",
         "reviews" :"I have seen my friends Company of different colors and shapes and so when I asked my parents.",
         "ratting" : 5,
@@ -8,35 +8,35 @@
     },
 
     {
-        "id" : 2,
+        "_id" : 2,
         "name" : "Ayob Ali",
-        "reviews" : "The manufacturur that I got was really beautifully and trendy. It was so grateful, which I am very fond of.",
+        "reviews" : "The manufacturur that I got was really beautifully and trendy. It was so grateful.",
         "ratting" : 4.5,
         "img" : "https://amzsummits.com/wp-content/uploads/2019/05/Ferry-Vermeulen.jpeg"
     },
     {
-        "id" : 3,
+        "_id" : 3,
         "name" : "Shohel shak",
-        "reviews" : "Inside the dial, the base is white in color. The numbers in the dial are all fluorescent and therefore it glows at night. ",
+        "reviews" : "Inside the dial, the base is white in color. The numbers in the dial are all fluorescent.",
         "ratting" : 3.5,
         "img" : "https://icon-library.com/images/user-icon-jpg/user-icon-jpg-22.jpg"
     },
     {
-        "id" : 4,
+        "_id" : 4,
         "name" : "Billal",
         "reviews" : "The minute needle and the second’s needle also have their tips translucent, so at night, even that glows.",
         "ratting" : 3,
         "img" : "https://png.pngtree.com/png-clipart/20190924/original/pngtree-businessman-user-avatar-free-vector-png-image_4827807.jpg"
     },
     {
-        "id" : 5,
+        "_id" : 5,
         "name" : "Soinik",
         "reviews" :"The most attractive feature of this manufacturer is the flexibility of the strap.",
         "ratting" : 4.5,
         "img" : "https://icon-library.com/images/profile-picture-icon/profile-picture-icon-0.jpg"
     },
     {
-        "id" : 6,
+        "_id" : 6,
         "name" : "Jewel",
         "reviews":"Apart from bending and wrapping to the wrist, it could also be folded in many shapes and designs",
         "ratting" : 4,
