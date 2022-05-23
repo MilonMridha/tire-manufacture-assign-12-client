@@ -11,6 +11,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Dashboard from './Components/Pages/Dashboard/Dashboard';
 import MyOrder from './Components/Pages/Dashboard/MyOrder';
+import Payment from './Components/Pages/Dashboard/Payment';
 
 function App() {
   return (
@@ -32,7 +33,7 @@ function App() {
           </RequireAuth>
         }>
           <Route index element={<MyOrder></MyOrder>}></Route>
-
+          <Route path='payment/:id' element={<Payment></Payment>}></Route>
 
 
 
