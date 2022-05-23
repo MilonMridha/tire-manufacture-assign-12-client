@@ -1,6 +1,7 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
-const CancelOrderModal = ({cancelOrder}) => {
+const CancelOrderModal = ({cancelOrder, refetch, setCancelOrder}) => {
     const {name, email} = cancelOrder;
 
     const handleDelete =() =>{
@@ -9,7 +10,13 @@ const CancelOrderModal = ({cancelOrder}) => {
             method: 'DELETE'
         }).then(res => res.json())
         .then(data => {
+            if(data.acknowledged === true){
+                toast.success('Order Cancelled Successfully')
+            }
+            refetch()
             console.log(data)
+            setCancelOrder(null)
+
         })
     }
     return (
