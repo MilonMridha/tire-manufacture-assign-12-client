@@ -10,7 +10,7 @@ const Parts = () => {
             <h2 className='text-2xl mt-5 font-mono font-bold'>Parts</h2>
            <div className='grid grid-cols-1 md:grid-cols-3 gap-5 p-5'>
            {
-                parts?.map(part=> <OnePart
+                parts?.slice(-3).map(part=> <OnePart
                 key={part._id}
                 part={part}
                 ></OnePart>)

@@ -7,8 +7,8 @@ const SummuryInfo = ({img, tittle, info}) => {
                 <img className='pt-5' src={img} alt="Album" />
             </figure>
             <div className="card-body text-black">
-                <h2 className="card-title">{tittle}</h2>
-                <p>{info}</p>
+                <h2 className="card-title font-bold text-3xl">{tittle}</h2>
+                <p className='font-bold'>{info}</p>
                 
             </div>
         </div>

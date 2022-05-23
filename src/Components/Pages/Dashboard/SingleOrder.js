@@ -5,9 +5,7 @@ const SingleOrder = ({ order, setCancelOrder }) => {
     const { address, name, email, phone, quantity, _id } = order;
 
 
-    const handleDelete = () => {
-
-    }
+    
 
     return (
         <div class="card  bg-base-100 shadow-xl text-left">
