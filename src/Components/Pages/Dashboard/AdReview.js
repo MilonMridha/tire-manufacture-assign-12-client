@@ -42,11 +42,11 @@ const photoRef = useRef('');
                             <form onSubmit={handleReviews}>
                                 
 
-                                <input ref={rattingRef}  className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="ratting" placeholder='Ratting' id="" />
+                                <input required ref={rattingRef}  className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="ratting" placeholder='Ratting' id="" />
 
-                                <input ref={commentRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="comment" placeholder='Your comment' id="" />
+                                <input required ref={commentRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="comment" placeholder='Your comment' id="" />
 
-                                <input ref={photoRef}  className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="img" placeholder='Your photo url' id="" />
+                                <input required ref={photoRef}  className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="img" placeholder='Your photo url' id="" />
 
                                 <div className=' flex justify-end mt-5'>
                                     <input className='btn btn-primary btn-sm rounded-none' type="submit" value="Add Review" />
