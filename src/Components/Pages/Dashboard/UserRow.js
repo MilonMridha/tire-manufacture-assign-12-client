@@ -2,7 +2,7 @@ import React from 'react';
 import { toast } from 'react-toastify';
 
 const UserRow = ({user, refetch, index}) => {
-    const { email, role, _id } = user;
+    const { email, role } = user;
 
     const makeAdmin = () =>{
         fetch(`http://localhost:5000/user/admin/${email}`, {
@@ -29,17 +29,14 @@ const UserRow = ({user, refetch, index}) => {
 
 
 
-    const handleDeleteUser = (id) =>{
-
-    }
+    
     return (
         <tr>
             <th>{index + 1}</th>
             <td>{email}</td>
             <td>{role !== 'admin' && <button onClick={makeAdmin} className="btn btn-xs">Make Admin</button>}
             </td>
-            <td><button onClick={() => handleDeleteUser(_id)} className="btn btn-xs bg-red-500 text-white">Remove User</button>
-            </td>
+            
         </tr>
     );
 };
