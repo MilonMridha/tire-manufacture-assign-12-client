@@ -34,9 +34,9 @@ const SignUp = () => {
         console.log('update One')
         
     };
-    if(user || gUser){
-        navigate('/');
-    }
+    // if(user || gUser){
+    //     navigate('/dashboard');
+    // }
 
     let signInError;
 
@@ -48,9 +48,9 @@ const SignUp = () => {
     }
 
     
-    // if(token){
-    //     navigate('/dashboard')
-    // }
+    if(token){
+        navigate('/dashboard')
+    }
     return (
         <div className='flex h-screen justify-center items-center overflow-hidden mt-5'>
             <div className="card w-96 bg-base-100 shadow-xl ">

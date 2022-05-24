@@ -18,6 +18,7 @@ import AllUsers from './Components/Pages/Dashboard/AllUsers';
 import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ManageProduct from './Components/Pages/Dashboard/ManageProduct';
 import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
+import NotFound from './Components/Pages/Shared/NotFound';
 
 function App() {
   return (
@@ -49,7 +50,7 @@ function App() {
 
 
         </Route>
-
+          <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <ToastContainer />
 

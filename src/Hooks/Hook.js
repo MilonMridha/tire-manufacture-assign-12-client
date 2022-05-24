@@ -1,15 +1,12 @@
 import { useEffect, useState } from "react"
+import { useQuery } from "react-query";
 
 const useHook =()=>{
 
-    const [parts, setParts] = useState([]);
+    const {data: parts, isLoading} = useQuery('parts', ()=> fetch('http://localhost:5000/parts').then(res => res.json()))
 
-    useEffect(()=>{
-        fetch('http://localhost:5000/parts')
-        .then(res=> res.json())
-        .then(data => setParts(data))
-    },[])
     
-    return [parts, setParts];
+    
+    return [parts, isLoading];
 }
 export default useHook;

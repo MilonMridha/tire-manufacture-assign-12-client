@@ -1,9 +1,14 @@
 import React from 'react';
 import useHook from '../../../Hooks/Hook';
+import Loading from '../Shared/Loading';
 import OnePart from './OnePart';
 
 const Parts = () => {
-    const [parts, setParts] = useHook();
+    const [parts, isLoading] = useHook();
+
+    if(isLoading){
+        return <Loading></Loading>
+    }
 
     return (
         <div>
