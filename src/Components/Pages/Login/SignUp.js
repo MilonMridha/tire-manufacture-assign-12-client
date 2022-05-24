@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import useToken from '../../../Hooks/UseToken';
 import Loading from '../Shared/Loading';
 
 
@@ -22,7 +23,7 @@ const SignUp = () => {
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
       const navigate = useNavigate();
 
-    //   const [token] = useToken(user || gUser);
+      const [token] = useToken(user || gUser);
 
     const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -48,7 +49,7 @@ const SignUp = () => {
 
     
     // if(token){
-    //     navigate('/appointment')
+    //     navigate('/dashboard')
     // }
     return (
         <div className='flex h-screen justify-center items-center overflow-hidden mt-5'>
