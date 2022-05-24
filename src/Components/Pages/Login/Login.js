@@ -1,5 +1,5 @@
 
-import React, { useEffect} from 'react';
+import React, { useEffect } from 'react';
 
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
@@ -13,31 +13,31 @@ import Loading from '../Shared/Loading';
 const Login = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const [signInWithEmailAndPassword, user, loading, error,] = useSignInWithEmailAndPassword(auth);
-    
+
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-   const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit } = useForm();
 
     const onSubmit = data => {
 
 
         signInWithEmailAndPassword(data.email, data.password);
     };
-        const [token] = useToken(user || gUser)
+    const [token] = useToken(user || gUser);
     const navigate = useNavigate();
     const location = useLocation();
 
 
     const from = location.state?.from?.pathname || '/';
 
-if(user || gUser){
-    navigate(from, { replace: true });
-}
+    if (user || gUser) {
+        navigate(from, { replace: true });
+    }
 
-    useEffect(() => {
-        if (token) {
-            navigate(from, { replace: true });
-        }
-    }, [token, from, navigate]);
+    // useEffect(() => {
+    //     if (token) {
+    //         navigate(from, { replace: true });
+    //     }
+    // }, [token, from, navigate]);
 
 
     let signInError;

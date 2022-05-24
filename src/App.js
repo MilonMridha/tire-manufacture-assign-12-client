@@ -15,6 +15,9 @@ import Payment from './Components/Pages/Dashboard/Payment';
 import AdReview from './Components/Pages/Dashboard/AdReview';
 import MyProfile from './Components/Pages/Dashboard/MyProfile';
 import AllUsers from './Components/Pages/Dashboard/AllUsers';
+import AddProduct from './Components/Pages/Dashboard/AddProduct';
+import ManageProduct from './Components/Pages/Dashboard/ManageProduct';
+import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
 
 function App() {
   return (
@@ -40,6 +43,9 @@ function App() {
           <Route path='review' element={<AdReview></AdReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
           <Route path='user' element={<AllUsers></AllUsers>}></Route>
+          <Route path='add' element={<AddProduct></AddProduct>}></Route>
+          <Route path='manage' element={<ManageProduct></ManageProduct>}></Route>
+          <Route path='allOrder' element={<ManageAllOrder></ManageAllOrder>}></Route>
 
 
         </Route>
