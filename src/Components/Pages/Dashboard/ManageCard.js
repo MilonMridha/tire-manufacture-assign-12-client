@@ -1,27 +1,10 @@
 import React from 'react';
 import { toast } from 'react-toastify';
 
-const ManageCard = ({item, refetch}) => {
+const ManageCard = ({item, refetch, setDeleteItem}) => {
     const {name, img, minOrderQty, availableQty, price, _id} = item;
 
-    const handleDelete = () =>{
-        const proceed = window.confirm('Do you want to delete user')
-        if(proceed){
-            const url = `http://localhost:5000/parts/${_id}`;
 
-            fetch(url, {
-                method: 'DELETE'
-            }).then(res => res.json())
-            .then(data => {
-                if(data.acknowledged === true){
-                    toast.error('User Deleted Successfully')
-                    }
-                    refetch()
-            })
-            
-        }
-
-    }
     return (
         <div className="card md:max-w-md bg-base-100 shadow-xl">
                 <div className="card-body">
@@ -39,7 +22,7 @@ const ManageCard = ({item, refetch}) => {
                             
                         </div>
                     </div>
-                    <button onClick={handleDelete} class="btn btn-xs btn-error mt-2">Delete</button>
+                    <label for="manage-confirm-modal" onClick={() => setDeleteItem(item)} class="btn btn-xs btn-error mt-2">Delete</label>
 
                 </div>
             </div>

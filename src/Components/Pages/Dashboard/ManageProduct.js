@@ -1,9 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useQuery } from 'react-query';
 import Loading from '../Shared/Loading';
 import ManageCard from './ManageCard';
+import ManageModal from './ManageModal';
 
 const ManageProduct = () => {
+
+    const [deleteItem, setDeleteItem] = useState(null);
+    
 
     const { data: items, isLoading, refetch } = useQuery('parts', () => fetch('http://localhost:5000/parts').then(res => res.json()))
 
@@ -18,10 +22,18 @@ const ManageProduct = () => {
                     items?.map(item => <ManageCard
                         key={item._id}
                         item={item}
-                        refetch={refetch}
+                        
+                        setDeleteItem={setDeleteItem}
                     ></ManageCard>)
                 }
             </div>
+            {
+                deleteItem && <ManageModal
+                refetch={refetch}
+                deleteItem={deleteItem}
+                setDeleteItem={setDeleteItem}
+                ></ManageModal>
+            }
         </div>
     );
 };
