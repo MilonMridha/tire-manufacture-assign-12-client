@@ -21,6 +21,17 @@ const Purchase = () => {
             .then(data => setDetail(data))
     }, [productQty]);
 
+    const [btnDisable, setBtnDisable] = useState(false);
+        const handleBtn =(e) =>{
+            let qty = parseInt(e.target.value);
+            if(qty > parseInt(availableQty) || qty < parseInt(minOrderQty)){
+                setBtnDisable(true)
+                setError('Order cannot below the minimum quantity & can not be higher than the available quantity')
+            }else{
+                setBtnDisable(false)
+            }
+        }
+
     const emailRef = useRef('');
     const nameRef = useRef('');
     const addressRef = useRef('');
@@ -110,16 +121,17 @@ const Purchase = () => {
                                 <input ref={emailRef} disabled className='border-b-2 border-primary w-full p-3' type="text" name="email" value={user?.email} id="" />
 
                                 <input ref={nameRef} disabled className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="name" value={user?.displayName} id="" />
-                                <input ref={addressRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="address" placeholder='Address' id="" />
 
-                                <input ref={phoneRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="phone" placeholder='Phone' id="" />
+                                <input required ref={addressRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="address" placeholder='Address' id="" />
 
-                                <input ref={quantityRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="quantity" placeholder='Quantity' id="" />
-                                
+                                <input  required ref={phoneRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="phone" placeholder='Phone' id="" />
+
+                                <input required ref={quantityRef} onChange={handleBtn}  className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="quantity" placeholder='Quantity' id="" />
+                            
                                 <p className='text-red-500 font-bold mt-2'>{error}</p>
 
                                 <div className=' flex justify-end mt-5'>
-                                    <input className='btn btn-primary rounded-none' type="submit" value="Order"  />
+                                    <input disabled={btnDisable} className='btn btn-primary rounded-none' type="submit" value="Order"  />
                                 </div>
                                
                             </form>
