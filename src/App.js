@@ -19,6 +19,8 @@ import AddProduct from './Components/Pages/Dashboard/AddProduct';
 import ManageProduct from './Components/Pages/Dashboard/ManageProduct';
 import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
 import NotFound from './Components/Pages/Shared/NotFound';
+import Blogs from './Components/Pages/Blogs/Blogs';
+import Portfolio from './Components/Pages/Portfolio/Portfolio';
 
 function App() {
   return (
@@ -51,6 +53,8 @@ function App() {
 
         </Route>
           <Route path='*' element={<NotFound></NotFound>}></Route>
+          <Route path='/blog' element={<Blogs></Blogs>}></Route>
+          <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
       </Routes>
       <ToastContainer />
 

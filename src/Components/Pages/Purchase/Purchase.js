@@ -12,6 +12,7 @@ const Purchase = () => {
     const { name, description, img, minOrderQty, availableQty, price, _id } = detail;
 
     const [productQty, setProductQty] = useState(availableQty);
+    const [error, setError] = useState('');
 
     useEffect(() => {
         const url = `http://localhost:5000/parts/${id}`;
@@ -36,14 +37,14 @@ const Purchase = () => {
         const quantity = quantityRef.current.value;
 
         const newOrder = {email, name, address, phone, quantity};
-
+        
 
            
         if (parseInt(quantity) < parseInt(minOrderQty)) {
-            return toast.error('Your quantity below the minimum order')
+           return setError('Your quantity below the minimum order')
         }
         if (parseInt(quantity) > parseInt(availableQty)) {
-            return toast.error('Your order can not be higher than the available quantity')
+           return setError('Your order can not be higher than the available quantity')
         }
 
         const newAvailableQty = parseInt(availableQty) - parseInt(quantity);
@@ -114,10 +115,13 @@ const Purchase = () => {
                                 <input ref={phoneRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="phone" placeholder='Phone' id="" />
 
                                 <input ref={quantityRef} className='border-b-2 border-primary w-full p-3 mt-2' type="text" name="quantity" placeholder='Quantity' id="" />
+                                
+                                <p className='text-red-500 font-bold mt-2'>{error}</p>
 
                                 <div className=' flex justify-end mt-5'>
-                                    <input className='btn btn-primary rounded-none' type="submit" value="Order" />
+                                    <input className='btn btn-primary rounded-none' type="submit" value="Order"  />
                                 </div>
+                               
                             </form>
                         </div>
                     </div>
