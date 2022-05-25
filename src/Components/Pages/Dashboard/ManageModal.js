@@ -5,7 +5,7 @@ const ManageModal = ({deleteItem, refetch,setDeleteItem }) => {
 const {name, _id} = deleteItem
 
     const handleDelete = () =>{
-        const url = `http://localhost:5000/parts/${_id}`;
+        const url = `https://dry-sea-91165.herokuapp.com/parts/${_id}`;
 
                 fetch(url, {
                     method: 'DELETE'

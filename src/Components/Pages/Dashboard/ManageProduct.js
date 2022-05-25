@@ -9,7 +9,7 @@ const ManageProduct = () => {
     const [deleteItem, setDeleteItem] = useState(null);
     
 
-    const { data: items, isLoading, refetch } = useQuery('parts', () => fetch('http://localhost:5000/parts').then(res => res.json()))
+    const { data: items, isLoading, refetch } = useQuery('parts', () => fetch('https://dry-sea-91165.herokuapp.com/parts').then(res => res.json()))
 
     if (isLoading) {
         return <Loading></Loading>

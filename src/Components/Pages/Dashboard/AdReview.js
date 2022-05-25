@@ -15,7 +15,7 @@ const photoRef = useRef('');
 
     const newReview = {ratting, reviews, img}
 
-    fetch("http://localhost:5000/review", {
+    fetch("https://dry-sea-91165.herokuapp.com/review", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

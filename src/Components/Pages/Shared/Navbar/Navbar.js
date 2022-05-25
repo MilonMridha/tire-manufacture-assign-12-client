@@ -38,7 +38,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl font-serif">Car's Wheel</a>
+                <a className="btn btn-ghost normal-case text-xl font-serif">Tyre Manufacture</a>
             </div>
 
             <div className="navbar-center hidden lg:flex">

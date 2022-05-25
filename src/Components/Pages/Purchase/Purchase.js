@@ -15,7 +15,7 @@ const Purchase = () => {
     const [error, setError] = useState('');
 
     useEffect(() => {
-        const url = `http://localhost:5000/parts/${id}`;
+        const url = `https://dry-sea-91165.herokuapp.com/parts/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setDetail(data))
@@ -63,7 +63,7 @@ const Purchase = () => {
         const updateQty = {newAvailableQty};
         
         // put method for quantity
-        const url = `http://localhost:5000/parts/${id}`;
+        const url = `https://dry-sea-91165.herokuapp.com/parts/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -76,7 +76,7 @@ const Purchase = () => {
             setProductQty(updateQty);
 
             //post method for order collection
-            fetch("http://localhost:5000/order", {
+            fetch("https://dry-sea-91165.herokuapp.com/order", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

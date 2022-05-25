@@ -5,7 +5,7 @@ import OrderRow from './OrderRow';
 
 const ManageAllOrder = () => {
 
-    const { data: allOrders, isLoading, refetch } = useQuery('order', () => fetch('http://localhost:5000/all-order').then(res => res.json()))
+    const { data: allOrders, isLoading, refetch } = useQuery('order', () => fetch('https://dry-sea-91165.herokuapp.com/all-order').then(res => res.json()))
 
     console.log(allOrders)
     if (isLoading) {

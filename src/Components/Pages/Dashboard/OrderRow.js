@@ -7,7 +7,7 @@ const OrderRow = ({order, index, refetch}) => {
     const handleDelete = () => {
         const proceed = window.confirm('Do you want to delete');
         if (proceed) {
-            const url = `http://localhost:5000/order/${email}`;
+            const url = `https://dry-sea-91165.herokuapp.com/order/${email}`;
 
             fetch(url, {
                 method: "DELETE"
@@ -26,7 +26,7 @@ const OrderRow = ({order, index, refetch}) => {
 
 
     const handlePatch = () =>{
-        fetch(`http://localhost:5000/shipped-order/${_id}`, {
+        fetch(`https://dry-sea-91165.herokuapp.com/shipped-order/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',

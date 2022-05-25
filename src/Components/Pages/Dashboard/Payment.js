@@ -12,7 +12,7 @@ const stripePromise = loadStripe('pk_test_51L197DIQrfpS93HURjAE4fzdmFmaec8dpMs9G
 const Payment = () => {
     const { id } = useParams()
 
-    const url = `http://localhost:5000/order/${id}`;
+    const url = `https://dry-sea-91165.herokuapp.com/order/${id}`;
 
     const { data: payBooking, isLoading } = useQuery(['order', id], () => fetch(url).then(res => res.json()));
     // const { name, address, email, quantity } = payBooking;

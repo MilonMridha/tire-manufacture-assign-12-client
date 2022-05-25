@@ -22,7 +22,7 @@ const AddProduct = () => {
             name, minOrderQty, availableQty, description, price, img
         };
         console.log(postItem)
-        fetch("http://localhost:5000/parts", {
+        fetch("https://dry-sea-91165.herokuapp.com/parts", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

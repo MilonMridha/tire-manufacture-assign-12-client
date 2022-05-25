@@ -29,7 +29,7 @@ const MyProfile = () => {
             email, name, location, phone, link, education
         };
 
-        const url = `http://localhost:5000/profile/${email}`;
+        const url = `https://dry-sea-91165.herokuapp.com/profile/${email}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -41,7 +41,7 @@ const MyProfile = () => {
             .then(data => {
                 if (data) {
                     toast.success('Update Your Profile Successfully & Save to Database');
-                    fetch(`http://localhost:5000/profile?email=${user?.email}`)
+                    fetch(`https://dry-sea-91165.herokuapp.com/profile?email=${user?.email}`)
                     .then(res => res.json())
                     .then(result => setProfile(result) )
                 }

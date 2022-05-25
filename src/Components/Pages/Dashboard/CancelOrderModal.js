@@ -5,7 +5,7 @@ const CancelOrderModal = ({cancelOrder, refetch, setCancelOrder}) => {
     const {name, email} = cancelOrder;
 
     const handleDelete =() =>{
-        const url = `http://localhost:5000/order/${email}`;
+        const url = `https://dry-sea-91165.herokuapp.com/order/${email}`;
         fetch(url, {
             method: 'DELETE'
         }).then(res => res.json())
