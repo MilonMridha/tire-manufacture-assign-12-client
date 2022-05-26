@@ -100,15 +100,15 @@ const Purchase = () => {
 
     return ( 
         <div className='grid grid-cols-1 md:grid-cols-2 justify-center mt-10 p-5 gap-5'>
-                <div class="card md:max-w-md bg-base-100 shadow-xl text-left">
+                <div className="card md:max-w-md bg-base-100 shadow-xl text-left">
                     <figure>
                         <img className='rounded-full' style={{ width: '200px' }} src={img} alt="part" />
                     </figure>
-                    <div class="card-body">
-                        <h2 class="card-title">Name: {name}</h2>
-                        <h2 class="font-bold">MiniOrderQty: {minOrderQty}</h2>
-                        <h2 class="font-bold">AvailableQty: {availableQty}</h2>
-                        <h2 class="font-bold">Price: {price}</h2>
+                    <div className="card-body">
+                        <h2 className="card-title">Name: {name}</h2>
+                        <h2 className="font-bold">MiniOrderQty: {minOrderQty}</h2>
+                        <h2 className="font-bold">AvailableQty: {availableQty}</h2>
+                        <h2 className="font-bold">Price: {price}</h2>
                         <p>Description: {description}</p>
 
                     </div>

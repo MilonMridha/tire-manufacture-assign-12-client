@@ -22,7 +22,7 @@ const ManageCard = ({item, refetch, setDeleteItem}) => {
                             
                         </div>
                     </div>
-                    <label for="manage-confirm-modal" onClick={() => setDeleteItem(item)} class="btn btn-xs btn-error mt-2">Delete</label>
+                    <label for="manage-confirm-modal" onClick={() => setDeleteItem(item)} className="btn btn-xs btn-error mt-2">Delete</label>
 
                 </div>
             </div>

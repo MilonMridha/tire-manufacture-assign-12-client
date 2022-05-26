@@ -10,18 +10,18 @@ const OnePart = ({part}) => {
     }
 
     return (
-        <div class="card md:max-w-md bg-base-100 shadow-xl text-left">
+        <div className="card md:max-w-md bg-base-100 shadow-xl text-left">
             <figure><img src={img} alt="Shoes" /></figure>
-            <div class="card-body">
-                <h2 class="card-title">Name: {name}</h2>
-                <h2 class="font-bold">MiniOrderQty: {minOrderQty}</h2>
-                <h2 class="font-bold">AvailableQty: {availableQty}</h2>
-                <h2 class="font-bold">Price: {price}</h2>
+            <div className="card-body">
+                <h2 className="card-title">Name: {name}</h2>
+                <h2 className="font-bold">MiniOrderQty: {minOrderQty}</h2>
+                <h2 className="font-bold">AvailableQty: {availableQty}</h2>
+                <h2 className="font-bold">Price: {price}</h2>
                 <p>Description: {description}</p>
                 
-                <div class="card-actions justify-end">
+                <div className="card-actions justify-end">
                 
-                    <button onClick={()=> goPurchase(_id)} class="btn btn-primary w-full font-bold">Book Now</button>
+                    <button onClick={()=> goPurchase(_id)} className="btn btn-primary w-full font-bold">Book Now</button>
                 </div>
             </div>
         </div>

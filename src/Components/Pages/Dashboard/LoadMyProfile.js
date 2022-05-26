@@ -13,10 +13,10 @@ console.log('amar nam', name)
     const [user] = useAuthState(auth)
 
     return (
-        <div class="card  bg-primary text-primary-content">
+        <div className="card  bg-primary text-primary-content">
             <h2 className='text-2xl font-mono font-semibold'>Profile</h2>
-            <div class="card-body font-mono font-bold text-left">
-                <h2 class="card-title">Name: {user?.displayName}</h2>
+            <div className="card-body font-mono font-bold text-left">
+                <h2 className="card-title">Name: {user?.displayName}</h2>
                 <p className='font-bold text-xl'>Email: {user?.email}</p>
                 <p className='font-bold'>Location: {location}</p>
                 <p className='font-bold'>Education: {education}</p>
