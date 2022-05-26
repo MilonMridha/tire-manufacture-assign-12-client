@@ -3,6 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../../firebase.init';
+import logo from './../../../../assets/tyre.png'
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
@@ -39,6 +40,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <a className="btn btn-ghost normal-case text-xl font-serif">Tyre Manufacture</a>
+                <img style={{width: '50px'}} src={logo} alt="" />
             </div>
 
             <div className="navbar-center hidden lg:flex">
