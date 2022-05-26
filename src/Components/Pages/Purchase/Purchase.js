@@ -99,7 +99,7 @@ const Purchase = () => {
 
 
     return ( 
-        <div className='flex justify-center mt-10 p-5 gap-5'>
+        <div className='grid grid-cols-1 md:grid-cols-2 justify-center mt-10 p-5 gap-5'>
                 <div class="card md:max-w-md bg-base-100 shadow-xl text-left">
                     <figure>
                         <img className='rounded-full' style={{ width: '200px' }} src={img} alt="part" />
@@ -114,7 +114,7 @@ const Purchase = () => {
                     </div>
                 </div>
                 
-                    <div className="card w-96 bg-base-100 shadow-xl">
+                    <div className="card bg-base-100 shadow-xl">
                         <div className="card-body">
                             <h2 className="card-title">Your Order</h2>
                             <form onSubmit={handleOrder}>

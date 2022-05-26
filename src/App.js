@@ -21,6 +21,7 @@ import ManageAllOrder from './Components/Pages/Dashboard/ManageAllOrder';
 import NotFound from './Components/Pages/Shared/NotFound';
 import Blogs from './Components/Pages/Blogs/Blogs';
 import Portfolio from './Components/Pages/Portfolio/Portfolio';
+import ResetPass from './Components/Pages/Login/ResetPass';
 
 function App() {
   return (
@@ -41,7 +42,7 @@ function App() {
             <Dashboard></Dashboard>
           </RequireAuth>
         }>
-          <Route index element={<MyOrder></MyOrder>}></Route>
+          <Route path='order' element={<MyOrder></MyOrder>}></Route>
           <Route path='payment/:id' element={<Payment></Payment>}></Route>
           <Route path='review' element={<AdReview></AdReview>}></Route>
           <Route path='profile' element={<MyProfile></MyProfile>}></Route>
@@ -55,6 +56,7 @@ function App() {
           <Route path='*' element={<NotFound></NotFound>}></Route>
           <Route path='/blog' element={<Blogs></Blogs>}></Route>
           <Route path='/portfolio' element={<Portfolio></Portfolio>}></Route>
+          <Route path='/reset' element={<ResetPass></ResetPass>}></Route>
       </Routes>
       <ToastContainer />
 

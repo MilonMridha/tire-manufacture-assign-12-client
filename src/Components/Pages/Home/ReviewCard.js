@@ -1,5 +1,7 @@
 import React from 'react';
-
+import Rating from 'react-rating';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const ReviewCard = ({ review }) => {
     const { name, reviews, ratting, img } = review;
     return (
@@ -15,7 +17,12 @@ const ReviewCard = ({ review }) => {
                         </div>
                         <div>
                             <h4 className='text-xl'>{name}</h4>
-                            <p>Ratting: {ratting} star</p>
+                            <p>Ratting: <Rating
+                        initialRating={ratting}
+                        emptySymbol={<FontAwesomeIcon icon={faStar} />}
+                        fullSymbol={<FontAwesomeIcon style={{ color: 'goldenrod' }} icon={faStar} />}
+                        readonly
+                    ></Rating></p>
                         </div>
                     </div>
 

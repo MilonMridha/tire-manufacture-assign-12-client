@@ -6,8 +6,8 @@ const Banner = () => {
         <div class="hero min-h-screen" style={{ background: `url(${banner})` }}>
             <div class="hero-overlay bg-opacity-60"></div>
             <div class="hero-content text-center text-neutral-content">
-                <div class="max-w-md">
-                    <h1 class="mb-5 text-6xl font-bold font-mono">Tyre Manufacture</h1>
+                <div class="md:max-w-md sm:col-span-1">
+                    <h1 class="mb-5 text-6xl font-bold font-mono text-yellow-400">Here's</h1>
                     <p class="mb-5">Our Aim is to Provide Good Quality Products, Prompt Service Support with Long Vision Reliable Products
                     </p>
                     <button class="btn btn-primary">Get Started</button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { toast } from 'react-toastify';
+
 
 const ManageCard = ({item, refetch, setDeleteItem}) => {
     const {name, img, minOrderQty, availableQty, price, _id} = item;

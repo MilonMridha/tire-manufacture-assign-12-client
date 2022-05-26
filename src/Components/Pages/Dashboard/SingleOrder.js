@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SingleOrder = ({ order, setCancelOrder }) => {
     const { address, name, email, phone, quantity, _id } = order;
 
-
+console.log(order)
     
 
     return (
