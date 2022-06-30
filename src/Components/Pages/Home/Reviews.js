@@ -1,9 +1,13 @@
 import React from 'react';
 import useReview from '../../../Hooks/ReviewHook';
 import ReviewCard from './ReviewCard';
-
+import Loading from '../Shared/Loading'
 const Reviews = () => {
-    const [reviews] = useReview();
+    const [reviews, isLoading] = useReview();
+
+    if (isLoading === true){
+        return <Loading></Loading>
+    }
 
     return (
         <div>

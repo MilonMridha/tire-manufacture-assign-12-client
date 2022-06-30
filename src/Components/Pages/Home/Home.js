@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../Shared/Footer/Footer';
 import Banner from './Banner';
 import BussinesSummury from './BussinesSummury';
+import ContactUs from './ContactUs';
 import FirstSection from './FirstSection';
 import Parts from './Parts';
 import Reviews from './Reviews';
@@ -15,7 +16,8 @@ const Home = () => {
             <BussinesSummury></BussinesSummury>
             <Reviews></Reviews>
             <FirstSection></FirstSection>
-            <SecondSection></SecondSection>
+            {/* <SecondSection></SecondSection> */}
+            <ContactUs></ContactUs>
             <Footer></Footer>
         </div>
     );

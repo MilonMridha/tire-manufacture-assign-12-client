@@ -39,7 +39,7 @@ const Navbar = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl font-serif">Tyre Manufacture</a>
+                <a className="btn btn-ghost normal-case text-xl font-serif">Tire Manufacture</a>
                 <img style={{width: '50px'}} src={logo} alt="" />
             </div>
 

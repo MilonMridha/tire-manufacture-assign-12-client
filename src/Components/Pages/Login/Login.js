@@ -1,5 +1,7 @@
 
 import React, { useEffect } from 'react';
+import Bounce from 'react-reveal';
+
 
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
@@ -47,7 +49,8 @@ const Login = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='flex h-screen justify-center items-center overflow-hidden'>
+        <Bounce left>
+            <div className='flex h-screen justify-center items-center overflow-hidden'>
             <div className="card w-96 bg-base-100 shadow-xl ">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Login</h2>
@@ -115,6 +118,7 @@ const Login = () => {
                 </div>
             </div>
         </div>
+        </Bounce>
     );
 };
 

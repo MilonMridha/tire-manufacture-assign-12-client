@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-
+import Fade from 'react-reveal/Fade';
 const OnePart = ({part}) => {
 
     const {name, description, img, minOrderQty, availableQty, price, _id} = part;
@@ -10,7 +10,8 @@ const OnePart = ({part}) => {
     }
 
     return (
-        <div className="card md:max-w-md bg-base-100 shadow-xl text-left">
+        <Fade left>
+            <div className="card md:max-w-md bg-base-100 shadow-xl text-left">
             <figure><img src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">Name: {name}</h2>
@@ -25,6 +26,7 @@ const OnePart = ({part}) => {
                 </div>
             </div>
         </div>
+        </Fade>
     );
 };
 
