@@ -25,6 +25,7 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^9.0.1",
     "react-typed": "^1.2.0",
+    "swiper": "^8.2.6",
     "typed.js": "^2.0.12",
     "web-vitals": "^2.1.4"
   },

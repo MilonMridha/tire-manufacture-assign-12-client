@@ -8,18 +8,18 @@ const ReviewCard = ({ review }) => {
     const { name, reviews, ratting, img } = review;
     return (
         <Flip left>
-            <div>
-            <div className="card md:max-w-md bg-base-100 shadow-xl">
-                <div className="card-body">
+            
+            <div className="card md:max-w-md bg-base-100">
+                <div className="card-body shadow-xl">
                     <p>{reviews}</p>
-                    <div className='flex items-center mt-10'>
+                    <div className='flex items-center mt-2'>
                         <div className="avatar">
-                            <div className="w-16 rounded-full ring ring-primary ring-offset-base-100 mr-5">
-                                <img src={img} alt="" />
+                            <div className="w-full rounded-full ring ring-primary ring-offset-base-100">
+                                <img style={{width: "50px"}} src={img} alt="" />
                             </div>
                         </div>
                         <div>
-                            <h4 className='text-xl'>{name}</h4>
+                            <h4 className='font-bold'>{name}</h4>
                             <p>Ratting: <Rating
                         initialRating={ratting}
                         emptySymbol={<FontAwesomeIcon icon={faStar} />}
@@ -32,7 +32,7 @@ const ReviewCard = ({ review }) => {
                 </div>
             </div>
 
-        </div>
+        
         </Flip>
     );
 };
