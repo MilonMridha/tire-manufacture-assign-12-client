@@ -18,9 +18,9 @@ const ReviewCard = ({ review }) => {
                                 <img style={{width: "50px"}} src={img} alt="" />
                             </div>
                         </div>
-                        <div>
+                        <div className='mr-5'>
                             <h4 className='font-bold'>{name}</h4>
-                            <p>Ratting: <Rating
+                            <p className=''>Ratting: <Rating
                         initialRating={ratting}
                         emptySymbol={<FontAwesomeIcon icon={faStar} />}
                         fullSymbol={<FontAwesomeIcon style={{ color: 'goldenrod' }} icon={faStar} />}
